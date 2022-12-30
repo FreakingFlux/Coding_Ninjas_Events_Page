@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Event_Page": {
+    "my-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "docs",
+            "outputPath": "dist/my-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -22,12 +22,7 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              {
-                "glob": "_redirects",
-                "input": "src",
-                "output": "/"
-              }
+              "src/assets"
             ],
             "styles": [
               "src/styles.css"
@@ -44,7 +39,7 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "5kb",
+                  "maximumWarning": "2kb",
                   "maximumError": "4kb"
                 }
               ],
@@ -65,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Event_Page:build:production"
+              "browserTarget": "my-app:build:production"
             },
             "development": {
-              "browserTarget": "Event_Page:build:development"
+              "browserTarget": "my-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Event_Page:build"
+            "browserTarget": "my-app:build"
           }
         },
         "test": {
@@ -96,14 +91,11 @@
             ],
             "scripts": []
           }
-        },
-        "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
   },
   "cli": {
-    "analytics": "2a3cbbe0-997b-485c-8cbf-391389644c38"
+    "analytics": "42154c18-0d05-4f23-a021-817ca41ca309"
   }
 }
