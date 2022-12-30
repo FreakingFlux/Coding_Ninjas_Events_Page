@@ -144,8 +144,8 @@ input::-webkit-inner-spin-button {
 .page {
   padding-right: 41px;
   display: flex;
-  align-items: center;
-  justify-content: end;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 @media (max-width: 720px) {
   .events-outer-wrapper {
